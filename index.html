@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Trade Belt is an AI assistant for tradespeople on WhatsApp. Talk through the job and it handles quotes, site diaries and job records.">
+<title>Trade Belt by Jenkinson Labs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..800;1,62..125,400..800&amp;display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark}
+body{margin:0;background:#14233D;color:#EEF1F6}
+a{color:inherit;text-underline-offset:4px}a:hover{opacity:.75}
+a:focus-visible{outline:3px solid #F2C230;outline-offset:3px}
+@keyframes tb-rise{0%{opacity:0;translate:0 120px}75%{opacity:1;translate:0 -10px}100%{opacity:1;translate:0 0}}
+@keyframes tb-load{from{opacity:0;translate:0 60px}to{opacity:1;translate:0 0}}
+@media (prefers-reduced-motion: no-preference){
+#top h1,#top > div{animation:tb-load 1.3s cubic-bezier(.2,.8,.2,1) both}
+#top h1{animation-delay:.35s}
+#top > div + h1 + div{animation-delay:.7s}
+@supports (animation-timeline: view()){
+main h2,section h2,footer > div > div:first-child,figure,#words figure + div,section[aria-label="What Trade Belt produces"] > div > div,ul[aria-label="Trades"] li,#journey ol > li,#journey ol + div,section[aria-label="How we work"] > div > div,#where h3{animation:tb-rise linear both;animation-timeline:view();animation-range:entry 25% cover 40%}
+section[aria-label="What Trade Belt produces"] > div > div:nth-child(2),#journey ol > li:nth-child(2),section[aria-label="How we work"] > div > div:nth-child(2),ul[aria-label="Trades"] li:nth-child(even){animation-range:entry 35% cover 46%}
+section[aria-label="What Trade Belt produces"] > div > div:nth-child(3),#journey ol > li:nth-child(3),section[aria-label="How we work"] > div > div:nth-child(3){animation-range:entry 45% cover 52%}
+#journey ol > li:nth-child(4){animation-range:entry 55% cover 58%}
+#top h2{animation:none}
+}
+}
+@media (min-width: 1000px){.tb-stage{flex-wrap:nowrap !important;zoom:.8;padding-left:24px !important;padding-right:24px !important}}
+</style>
+</head>
+<body>
+<div style="--page-bg: #14233D; --page-fg: #EEF1F6; --band-bg: #1D3256; --band-fg: #EEF1F6; --alt-bg: #F2C230; --alt-fg: #14233D; --dark-bg: #0B1628; --dark-fg: #EEF1F6; --btn-bg: #F2C230; --btn-fg: #14233D; --accent: #F2C230; --accent-fg: #14233D; --buckle: #F2C230; font-family: Archivo, system-ui, sans-serif; color: var(--page-fg); background: var(--page-bg); min-height: 100vh">
+
+<header style="max-width: 1280px; margin: 0 auto; padding: 28px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+<a href="#top" style="text-decoration: none; display: flex; align-items: center; gap: 12px">
+<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="0.5" y="0.5" width="33" height="33" rx="3" fill="currentColor"/><path d="M20 8v13.5a5 5 0 0 1-10 0" fill="none" style="stroke: var(--buckle)" stroke-width="3"/></svg>
+<span style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-size: 24px; letter-spacing: -0.01em">Jenkinson Labs</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 16px">
+<a href="#journey" style="text-decoration: none">What it does</a>
+<a href="#words" style="text-decoration: none">How it works</a>
+<a href="#where" style="text-decoration: none">Where it works</a>
+<a href="#contact" style="text-decoration: none">Contact</a>
+</nav>
+</header>
+
+<section id="top" style="max-width: 1280px; margin: 0 auto; padding: 64px 40px 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 18px 22px; margin-bottom: 48px">
+<svg width="84" height="56" viewBox="0 0 84 56" role="img" aria-label="Trade Belt logo"><rect x="3" y="14" width="78" height="28" rx="4" fill="currentColor"/><rect x="20" y="4" width="44" height="48" rx="9" fill="none" style="stroke: var(--buckle)" stroke-width="6"/><rect x="39" y="18" width="6" height="20" rx="3" style="fill: var(--buckle)"/></svg>
+<div>
+<div style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 800; font-size: clamp(40px, 4.6vw, 60px); line-height: 1; letter-spacing: -0.03em">Trade Belt</div>
+<div style="font-size: 16px; color: color-mix(in srgb, currentColor 75%, transparent); margin-top: 6px">The AI assistant for tradespeople, made by Jenkinson Labs</div>
+</div>
+</div>
+<h1 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: clamp(40px, 5.8vw, 84px); line-height: 1; letter-spacing: -0.035em; margin: 0; max-width: 1120px">The paperwork, done by the time you're back in the van.</h1>
+<div style="display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: flex-end; justify-content: space-between; margin-top: 40px">
+<p style="flex: 1 1 460px; min-width: 0; max-width: 620px; font-size: 20px; line-height: 1.6; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0">Trade Belt is an AI assistant for tradespeople of every kind. Talk through the job, send a few photos, and it handles the admin around the work: quotes, site diaries, changes, job records and, soon, invoices and chasing payment. You check everything before it goes. It starts in WhatsApp, the app you already use all day.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px">
+<a href="mailto:tommy@jenkinsonlabs.com?subject=Trade%20Belt%20pilot" style="background: var(--btn-bg); color: var(--btn-fg); text-decoration: none; font-weight: 600; font-size: 17px; padding: 17px 30px; border-radius: 999px">Join the pilot</a>
+<a href="#words" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 17px; padding: 15px 28px; border-radius: 999px; border: 2px solid currentColor">See how it works</a>
+</div>
+</div>
+</section>
+
+<section aria-label="What Trade Belt produces" style="max-width: 1280px; margin: 0 auto; padding: 72px 40px 112px">
+<div class="tb-stage" style="background: var(--band-bg); border-radius: 28px; padding: 64px 40px 72px; display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start; gap: 48px">
+
+<div style="flex: 0 0 300px; transform: rotate(-3deg); margin-top: 40px; color: #17212B">
+<div style="background: #17212B; border-radius: 40px; padding: 12px; box-shadow: 0 30px 40px -18px rgba(23,33,43,0.45)">
+<div style="background: #EFEAE2; border-radius: 30px; overflow: hidden">
+<div style="background: #1E3B33; color: #FFFFFF; padding: 16px 16px 14px; display: flex; align-items: center; gap: 10px">
+<div style="width: 30px; height: 30px; border-radius: 50%; background: #F2C230; color: #17212B; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 12px">TB</div>
+<div><div style="font-weight: 600; font-size: 14px">Trade Belt</div><div style="font-size: 11px; opacity: 0.75">online</div></div>
+</div>
+<div style="padding: 14px; display: flex; flex-direction: column; gap: 8px; font-size: 13px; line-height: 1.45">
+<div style="align-self: flex-end; background: #D3F2C2; padding: 9px 11px; border-radius: 10px 10px 2px 10px; display: flex; align-items: center; gap: 8px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#17212B" stroke-width="2" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+<svg width="96" height="16" viewBox="0 0 96 16" aria-hidden="true"><g fill="#4B5560"><rect x="0" y="6" width="2" height="4"/><rect x="5" y="3" width="2" height="10"/><rect x="10" y="5" width="2" height="6"/><rect x="15" y="1" width="2" height="14"/><rect x="20" y="4" width="2" height="8"/><rect x="25" y="6" width="2" height="4"/><rect x="30" y="2" width="2" height="12"/><rect x="35" y="5" width="2" height="6"/><rect x="40" y="3" width="2" height="10"/><rect x="45" y="6" width="2" height="4"/><rect x="50" y="2" width="2" height="12"/><rect x="55" y="4" width="2" height="8"/><rect x="60" y="6" width="2" height="4"/><rect x="65" y="3" width="2" height="10"/><rect x="70" y="5" width="2" height="6"/><rect x="75" y="6" width="2" height="4"/></g></svg>
+<span>0:42</span>
+</div>
+<div style="background: #FFFFFF; padding: 11px; border-radius: 10px 10px 10px 2px; max-width: 92%">
+<div style="font-weight: 600">Oak Lane: site diary</div>
+<div style="margin-top: 5px">First fix plumbing finished in the kitchen.</div>
+<div style="margin-top: 4px">Client asked for an extra double socket by the island. Not on the drawings, so it needs pricing and her sign-off.</div>
+<div style="margin-top: 6px; color: #5A6470; font-size: 12px">Filed under Oak Lane</div>
+</div>
+<div style="align-self: flex-end; width: 150px; height: 96px; border-radius: 10px; background: #B9A58C; position: relative; overflow: hidden">
+<svg width="150" height="96" viewBox="0 0 150 96" aria-hidden="true"><rect width="150" height="96" fill="#C9B79E"/><rect x="0" y="62" width="150" height="34" fill="#A8957C"/><path d="M10 30H140M10 40H140" stroke="#B5651D" stroke-width="4"/><path d="M60 30v32M90 40v22" stroke="#B5651D" stroke-width="4"/><rect x="104" y="12" width="22" height="16" rx="2" fill="#F4F2EC"/></svg>
+</div>
+<div style="background: #FFFFFF; padding: 11px; border-radius: 10px 10px 10px 2px; max-width: 92%">Photo filed: copper pipework along the kitchen wall, before boarding.</div>
+<div style="align-self: flex-end; width: 170px; height: 100px; border-radius: 10px; overflow: hidden; position: relative">
+<svg width="170" height="100" viewBox="0 0 170 100" aria-hidden="true"><rect width="170" height="100" fill="#8E9A8C"/><rect x="0" y="64" width="170" height="36" fill="#6F7A6D"/><path d="M18 64V30h70v34" fill="#A7B0A2"/><path d="M18 30l35-16 35 16" fill="#5E4A3A"/><rect x="40" y="42" width="16" height="22" fill="#3F3A33"/><circle cx="85" cy="50" r="20" fill="rgba(23,33,43,0.72)"/><path d="M79 40v20l17-10z" fill="#FFFFFF"/><rect x="126" y="80" width="38" height="14" rx="7" fill="rgba(23,33,43,0.72)"/><text x="145" y="90.5" font-size="9" font-family="sans-serif" fill="#FFFFFF" text-anchor="middle">1:12</text></svg>
+</div>
+<div style="background: #FFFFFF; padding: 11px; border-radius: 10px 10px 10px 2px; max-width: 92%">Video filed: rear wall walk-round. Diary entry written and 4 stills saved with the visit.</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="flex: 0 1 380px; min-width: 0; position: relative; transform: rotate(1.5deg); z-index: 1; color: #17212B">
+<div style="position: absolute; top: -18px; left: 50%; transform: translateX(-50%) rotate(-4deg); width: 132px; height: 34px; background: #F2C230; opacity: 0.92"></div>
+<div style="background: #FFFFFF; border-radius: 4px; box-shadow: 0 30px 40px -18px rgba(23,33,43,0.4); overflow: hidden">
+<div style="background: #17212B; color: #FFFFFF; padding: 22px 26px; display: flex; justify-content: space-between; gap: 12px">
+<div style="font-weight: 600; font-size: 16px">Example Electrical</div>
+<div style="font-size: 11px; line-height: 1.6; text-align: right; color: #C8D0D8">07700 900000<br>quotes@example.com</div>
+</div>
+<div style="padding: 26px">
+<div style="display: flex; justify-content: space-between; gap: 12px; align-items: flex-start">
+<div style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-size: 30px; line-height: 1">Quotation</div>
+<div style="font-size: 11px; line-height: 1.6; color: #5A6470; text-align: right">Q-20261109-1012<br>Valid until 9 December 2026</div>
+</div>
+<div style="margin-top: 20px; background: #F1F3EF; border-radius: 4px; padding: 12px 14px; font-size: 12px; line-height: 1.55">Prepared for Mr J Smith<br>22 Commercial Road, Bristol</div>
+<div style="margin-top: 20px; font-weight: 600; font-size: 12px">House</div>
+<div style="font-size: 12px; line-height: 1.75; color: color-mix(in srgb, currentColor 82%, transparent)">Install four double sockets in the kitchen.<br>Replace the consumer unit.</div>
+<div style="margin-top: 12px; font-weight: 600; font-size: 12px">Outbuilding</div>
+<div style="font-size: 12px; line-height: 1.75; color: color-mix(in srgb, currentColor 82%, transparent)">Supply and fit two LED floodlights with PIR.<br>Run armoured cable from the house, buried at 600mm.<br>Fit a weatherproof double socket by the door.</div>
+<div style="margin-top: 12px; font-weight: 600; font-size: 12px">Garden</div>
+<div style="font-size: 12px; line-height: 1.75; color: color-mix(in srgb, currentColor 82%, transparent)">Install two bollard lights along the path.<br>Add an outdoor switch by the back door.</div>
+<div style="margin-top: 12px; font-weight: 600; font-size: 12px">General</div>
+<div style="font-size: 12px; line-height: 1.75; color: color-mix(in srgb, currentColor 82%, transparent)">All work tested and certified to BS 7671.<br>Priced for white plastic accessories.<br>Making good of plaster by others.</div>
+<div style="margin-top: 22px; border-top: 1px solid #DDE1DA; padding-top: 14px; display: flex; justify-content: space-between; align-items: baseline">
+<span style="font-size: 12px; color: #5A6470">Total</span>
+<span style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-size: 26px">[£ total]</span>
+</div>
+<div style="margin-top: 18px; font-size: 10px; line-height: 1.6; color: #5A6470">This quote is valid for 30 days. Any extra work will be agreed and priced with you before it starts.</div>
+<div style="margin-top: 26px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; font-size: 10px; color: #5A6470">
+<div style="border-top: 1px solid #8A939C; padding-top: 4px">Name</div>
+<div style="border-top: 1px solid #8A939C; padding-top: 4px">Signature</div>
+<div style="border-top: 1px solid #8A939C; padding-top: 4px">Date</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="flex: 0 1 300px; min-width: 0; transform: rotate(-1deg); margin-top: 56px; color: #17212B">
+<div style="background: #FFFFFF; border-radius: 4px; box-shadow: 0 30px 40px -18px rgba(23,33,43,0.4); padding: 22px">
+<div style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-size: 22px">Oak Lane extension</div>
+<div style="font-size: 11px; color: #5A6470; margin-top: 4px">Documentation pack, page 2 of 6</div>
+<div style="margin-top: 16px; background: #E3E7E0; border-top: 2px solid currentColor; padding: 8px 10px; font-size: 11px; font-weight: 600; display: flex; justify-content: space-between"><span>Site visit, 09:05, first fix</span><span style="font-weight: 400">3 photos</span></div>
+<div style="font-size: 11px; line-height: 1.6; color: color-mix(in srgb, currentColor 82%, transparent); margin-top: 10px">First fix plumbing complete in the kitchen. Extra socket requested by client; to be priced.</div>
+<div style="margin-top: 10px; background: #F1F3EF; border-left: 2px solid #8A939C; padding: 8px 10px; font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-style: italic; font-size: 12px; line-height: 1.5; color: color-mix(in srgb, currentColor 82%, transparent)">"Right, first fix is done in the kitchen, and she's asked for another socket by the island…"</div>
+<div style="margin-top: 12px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<svg viewBox="0 0 120 80" style="width: 100%; height: auto; border-radius: 2px" aria-hidden="true"><rect width="120" height="80" fill="#C9B79E"/><path d="M8 26H112M8 34H112M48 26v30" stroke="#B5651D" stroke-width="3.5"/><rect x="0" y="56" width="120" height="24" fill="#A8957C"/></svg>
+<svg viewBox="0 0 120 80" style="width: 100%; height: auto; border-radius: 2px" aria-hidden="true"><rect width="120" height="80" fill="#9FA79C"/><path d="M0 50h120M20 50V20h80v30" stroke="#7B8478" stroke-width="3" fill="none"/><path d="M30 50V30h22v20" fill="#8A6B4E"/></svg>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; font-size: 10px; color: #5A6470; margin-top: 4px"><span>Photo 1, taken 09:05</span><span>Photo 2, taken 09:08</span></div>
+<div style="margin-top: 18px; background: #E3E7E0; border-top: 2px solid currentColor; padding: 8px 10px; font-size: 11px; font-weight: 600; display: flex; justify-content: space-between"><span>Site visit, 14:20, rear wall</span><span style="font-weight: 400">video</span></div>
+<div style="font-size: 11px; line-height: 1.6; color: color-mix(in srgb, currentColor 82%, transparent); margin-top: 10px">Render cracked along the rear wall. Client asked for the gutter to be replaced; to be priced.</div>
+<div style="margin-top: 10px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<svg viewBox="0 0 120 80" style="width: 100%; height: auto; border-radius: 2px" aria-hidden="true"><rect width="120" height="80" fill="#8E9A8C"/><path d="M10 60V22h100v38" fill="#A7B0A2"/><path d="M30 30l14 10 -6 8 12 10" stroke="#5E4A3A" stroke-width="2" fill="none"/><rect x="0" y="60" width="120" height="20" fill="#6F7A6D"/></svg>
+<svg viewBox="0 0 120 80" style="width: 100%; height: auto; border-radius: 2px" aria-hidden="true"><rect width="120" height="80" fill="#9FA79C"/><path d="M6 20H114" stroke="#4B5560" stroke-width="5"/><path d="M96 20v50" stroke="#4B5560" stroke-width="4"/><rect x="0" y="62" width="120" height="18" fill="#7B8478"/></svg>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; font-size: 10px; color: #5A6470; margin-top: 4px"><span>Video still, 0:18</span><span>Video still, 0:47</span></div>
+<div style="margin-top: 18px; font-size: 11px; font-weight: 600">Variations</div>
+<div style="margin-top: 6px; font-size: 10px; color: color-mix(in srgb, currentColor 82%, transparent)">
+<div style="display: grid; grid-template-columns: 34px minmax(0, 1fr) 62px; gap: 6px; padding: 6px 0; border-top: 1px solid #DDE1DA"><span>V-01</span><span>Extra socket by island</span><span>Approved</span></div>
+<div style="display: grid; grid-template-columns: 34px minmax(0, 1fr) 62px; gap: 6px; padding: 6px 0; border-top: 1px solid #DDE1DA; border-bottom: 1px solid #DDE1DA"><span>V-02</span><span>Replace rear gutter</span><span>To price</span></div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section aria-label="Who it's for" style="max-width: 1280px; margin: 0 auto; padding: 0 40px 120px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px 96px; align-items: flex-start">
+<div style="flex: 1 1 360px; min-width: 0">
+<h2 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: clamp(36px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 24px">Trade Belt is made for the people who build, fix and fit.</h2>
+<p style="font-size: 19px; line-height: 1.7; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0 0 18px">Whether you work alone or run a small firm with subcontractors, the evenings look the same: quotes to write, photos to sort, messages to answer and invoices to chase. Trade Belt learns how you work, your prices, your wording and your trade, and takes that admin off your hands.</p>
+<p style="font-size: 19px; line-height: 1.7; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0">It's set up around each business, not one size fits all. A roofer's quote doesn't look like a plasterer's, and it shouldn't.</p>
+</div>
+<ul aria-label="Trades" style="flex: 1 1 520px; min-width: 0; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0 32px; font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.2">
+<li style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 14px 0">Electricians</li>
+<li style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 14px 0">Plumbers</li>
+<li style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 14px 0">Heating engineers</li>
+<li style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 14px 0">Roofers</li>
+<li style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 14px 0">Builders</li>
+<li style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 14px 0">Carpenters and joiners</li>
+<li style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 14px 0">Plasterers</li>
+<li style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 14px 0">Bricklayers</li>
+<li style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 14px 0">Tilers</li>
+<li style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 14px 0">Painters and decorators</li>
+<li style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 14px 0">Kitchen and bathroom fitters</li>
+<li style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 14px 0">Landscapers</li>
+</ul>
+</div>
+</section>
+
+<section id="journey" aria-label="The whole job" style="background: var(--alt-bg); color: var(--alt-fg)">
+<div style="max-width: 1280px; margin: 0 auto; padding: 120px 40px">
+<h2 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: clamp(36px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 20px; max-width: 980px">Trade Belt follows the job from the first enquiry to the final payment.</h2>
+<p style="font-size: 19px; line-height: 1.7; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0 0 16px; max-width: 700px">Most tools handle one piece of the job. Trade Belt keeps hold of the whole thing, so every message, photo and price stays attached to the job it belongs to, and nothing has to be typed up twice.</p>
+<p style="font-size: 16px; line-height: 1.6; color: color-mix(in srgb, currentColor 75%, transparent); margin: 0 0 64px; max-width: 700px; display: flex; flex-wrap: wrap; gap: 8px 22px">
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 50%; background: currentColor"></span>In the pilot now</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 12px; height: 12px; border-radius: 50%; border: 2px solid currentColor; box-sizing: border-box"></span>Coming next</span>
+</p>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0">
+<li style="border-top: 2px solid currentColor; padding: 24px 24px 32px 0">
+<div style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-size: 48px; line-height: 1; color: color-mix(in srgb, currentColor 45%, transparent)">1</div>
+<h3 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: 24px; margin: 16px 0 16px">The enquiry</h3>
+<div style="font-size: 16px; line-height: 1.6; color: color-mix(in srgb, currentColor 82%, transparent); display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 10px"><span style="flex: none; margin-top: 6px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid currentColor; box-sizing: border-box"></span><span>Fast, polite replies to new leads, so you don't lose work while your hands are full.</span></div>
+<div style="display: flex; gap: 10px"><span style="flex: none; margin-top: 6px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid currentColor; box-sizing: border-box"></span><span>Site visits booked in without the back and forth.</span></div>
+</div>
+</li>
+<li style="border-top: 2px solid currentColor; padding: 24px 24px 32px 0">
+<div style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-size: 48px; line-height: 1; color: color-mix(in srgb, currentColor 45%, transparent)">2</div>
+<h3 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: 24px; margin: 16px 0 16px">The quote</h3>
+<div style="font-size: 16px; line-height: 1.6; color: color-mix(in srgb, currentColor 82%, transparent); display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 10px"><span style="flex: none; margin-top: 6px; width: 10px; height: 10px; border-radius: 50%; background: currentColor"></span><span>Voice note to a priced, branded PDF quote, from your own price list.</span></div>
+<div style="display: flex; gap: 10px"><span style="flex: none; margin-top: 6px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid currentColor; box-sizing: border-box"></span><span>Estimates for bigger jobs from site visit notes and photos.</span></div>
+<div style="display: flex; gap: 10px"><span style="flex: none; margin-top: 6px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid currentColor; box-sizing: border-box"></span><span>A parts list ready for the wholesaler.</span></div>
+</div>
+</li>
+<li style="border-top: 2px solid currentColor; padding: 24px 24px 32px 0">
+<div style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-size: 48px; line-height: 1; color: color-mix(in srgb, currentColor 45%, transparent)">3</div>
+<h3 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: 24px; margin: 16px 0 16px">The work</h3>
+<div style="font-size: 16px; line-height: 1.6; color: color-mix(in srgb, currentColor 82%, transparent); display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 10px"><span style="flex: none; margin-top: 6px; width: 10px; height: 10px; border-radius: 50%; background: currentColor"></span><span>A dated site diary from your voice notes.</span></div>
+<div style="display: flex; gap: 10px"><span style="flex: none; margin-top: 6px; width: 10px; height: 10px; border-radius: 50%; background: currentColor"></span><span>Photos and videos described and filed against the job.</span></div>
+<div style="display: flex; gap: 10px"><span style="flex: none; margin-top: 6px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid currentColor; box-sizing: border-box"></span><span>Changes to the job sent to your client to approve, in writing.</span></div>
+<div style="display: flex; gap: 10px"><span style="flex: none; margin-top: 6px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid currentColor; box-sizing: border-box"></span><span>Progress updates for your client, without you writing them.</span></div>
+</div>
+</li>
+<li style="border-top: 2px solid currentColor; padding: 24px 24px 32px 0">
+<div style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-size: 48px; line-height: 1; color: color-mix(in srgb, currentColor 45%, transparent)">4</div>
+<h3 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: 24px; margin: 16px 0 16px">Finishing up</h3>
+<div style="font-size: 16px; line-height: 1.6; color: color-mix(in srgb, currentColor 82%, transparent); display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 10px"><span style="flex: none; margin-top: 6px; width: 10px; height: 10px; border-radius: 50%; background: currentColor"></span><span>A documentation pack of the whole job, ready if anything is ever disputed.</span></div>
+<div style="display: flex; gap: 10px"><span style="flex: none; margin-top: 6px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid currentColor; box-sizing: border-box"></span><span>Invoices, staged payments and polite reminders when they're due.</span></div>
+<div style="display: flex; gap: 10px"><span style="flex: none; margin-top: 6px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid currentColor; box-sizing: border-box"></span><span>A review request at the right moment.</span></div>
+</div>
+</li>
+</ol>
+<div style="margin-top: 56px; background: color-mix(in srgb, currentColor 9%, transparent); border-radius: 6px; padding: 32px 36px; display: flex; flex-wrap: wrap; gap: 16px 48px; align-items: baseline">
+<h3 style="flex: 0 1 320px; font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: 24px; margin: 0">Ask your job anything</h3>
+<p style="flex: 1 1 420px; min-width: 0; font-size: 17px; line-height: 1.65; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0">Coming next: "What did we agree about the skirting at Oak Lane?" "Which changes haven't been signed off?" Ask in plain words and get the answer, with the message or photo it came from.</p>
+</div>
+</div>
+</section>
+
+<section id="words" style="background: var(--dark-bg); color: var(--dark-fg)">
+<div style="max-width: 1280px; margin: 0 auto; padding: 112px 40px">
+<h2 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: clamp(36px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 20px; max-width: 900px">Say it the way you'd say it. Get it back the way a client needs it.</h2>
+<p style="font-size: 18px; line-height: 1.65; color: color-mix(in srgb, currentColor 78%, transparent); margin: 0 0 64px; max-width: 640px">Every write-up keeps your original words beside it, so nothing is lost in translation and nothing is added that you didn't say.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 48px 72px; align-items: flex-start">
+<figure style="flex: 1 1 420px; min-width: 0; margin: 0">
+<figcaption style="font-size: 15px; color: color-mix(in srgb, currentColor 78%, transparent); margin-bottom: 18px">What you said, in a voice note on the way out</figcaption>
+<blockquote style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-size: 30px; line-height: 1.4; color: inherit">"Right so first fix is done in the kitchen at Oak Lane. She's asked for another double socket by the island, that's not on the drawings. And I need three more lengths of fifteen mil copper for tomorrow."</blockquote>
+</figure>
+<div style="flex: 1 1 380px; min-width: 0; background: #F3F4F1; color: #17212B; border-radius: 6px; padding: 32px">
+<div style="font-size: 15px; color: color-mix(in srgb, currentColor 75%, transparent); margin-bottom: 18px">What Trade Belt files</div>
+<div style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-size: 26px; margin-bottom: 18px">Oak Lane: site diary</div>
+<dl style="margin: 0; font-size: 16px; line-height: 1.55; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 14px 22px">
+<dt style="font-weight: 600">Work done</dt><dd style="margin: 0">First fix plumbing finished in the kitchen.</dd>
+<dt style="font-weight: 600">Possible variation</dt><dd style="margin: 0">Extra double socket by the island, not on the drawings. Needs pricing and the client's written approval.</dd>
+<dt style="font-weight: 600">Materials</dt><dd style="margin: 0">3 lengths of 15mm copper, needed tomorrow.</dd>
+</dl>
+</div>
+</div>
+</div>
+</section>
+
+<section id="quote" style="max-width: 1280px; margin: 0 auto; padding: 120px 40px; display: flex; flex-wrap: wrap; gap: 56px 96px">
+<h2 style="flex: 1 1 420px; min-width: 0; font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: clamp(36px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -0.02em; margin: 0">Quotes priced from your own list, not from a guess.</h2>
+<div style="flex: 1 1 480px; min-width: 0; font-size: 19px; line-height: 1.7; color: color-mix(in srgb, currentColor 82%, transparent)">
+<p style="margin: 0 0 22px">Describe the job and Trade Belt sets out the work by area, the way you'd write it yourself. Materials are priced from your price list, your labour rate and markup are added, and you get a branded PDF with a quote number, a valid-until date and a box for the client to sign.</p>
+<p style="margin: 0">If something's missing, like a price it can't find or a labour time you didn't mention, it tells you before anything is sent. The AI never makes up a number.</p>
+</div>
+</section>
+
+<section id="record" style="max-width: 1280px; margin: 0 auto; padding: 0 40px 120px">
+<div style="border-top: 2px solid currentColor; padding-top: 56px; display: flex; flex-wrap: wrap; gap: 56px 96px">
+<h2 style="flex: 1 1 420px; min-width: 0; font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: clamp(36px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -0.02em; margin: 0">A record of the job, ready before anyone asks for it.</h2>
+<div style="flex: 1 1 480px; min-width: 0; font-size: 19px; line-height: 1.7; color: color-mix(in srgb, currentColor 82%, transparent)">
+<p style="margin: 0 0 22px">Every visit is dated and filed with its photos and videos. Changes the client asks for are noted as they happen. When a client questions what was agreed, the whole job comes out as one documentation pack.</p>
+<p style="margin: 0">On a bigger project, it's the site diary you never had time to keep. On a one-day job, it's proof of what you did and when. Either way, it's there before anyone asks for it.</p>
+</div>
+</div>
+</section>
+
+<section aria-label="How we work" style="background: var(--band-bg); color: var(--band-fg)">
+<div style="max-width: 1280px; margin: 0 auto; padding: 104px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 48px">
+<div>
+<h3 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: 24px; margin: 0 0 12px">You approve everything</h3>
+<p style="font-size: 17px; line-height: 1.65; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0">Trade Belt drafts. Nothing reaches your client until you've checked it.</p>
+</div>
+<div>
+<h3 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: 24px; margin: 0 0 12px">Set up around you</h3>
+<p style="font-size: 17px; line-height: 1.65; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0">We load your prices, your quote layout and your way of working, then keep improving it as you use it.</p>
+</div>
+<div>
+<h3 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: 24px; margin: 0 0 12px">Your data stays close</h3>
+<p style="font-size: 17px; line-height: 1.65; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0">Job records are stored in the UK and Europe, and they're yours.</p>
+</div>
+</div>
+</section>
+
+<section id="where" aria-label="Where it works" style="max-width: 1280px; margin: 0 auto; padding: 120px 40px 0">
+<div style="display: flex; flex-wrap: wrap; gap: 48px 96px; align-items: flex-start">
+<div style="flex: 1 1 420px; min-width: 0">
+<h2 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: clamp(36px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 24px">Starts in WhatsApp. Goes wherever you work.</h2>
+<p style="font-size: 19px; line-height: 1.7; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0">We started where tradespeople already are: no download, no password, nothing to learn on site. As Trade Belt grows, it'll meet you in more places, with everything kept on the same job record.</p>
+</div>
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column">
+<div style="border-top: 2px solid currentColor; padding: 22px 0; display: flex; gap: 24px; align-items: baseline; flex-wrap: wrap">
+<h3 style="flex: 0 0 180px; font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: 24px; margin: 0">WhatsApp</h3>
+<p style="flex: 1 1 220px; min-width: 0; font-size: 17px; line-height: 1.6; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0">Available in the pilot now. Voice notes, photos, videos and messages.</p>
+</div>
+<div style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 22px 0; display: flex; gap: 24px; align-items: baseline; flex-wrap: wrap">
+<h3 style="flex: 0 0 180px; font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: 24px; margin: 0">Text message</h3>
+<p style="flex: 1 1 220px; min-width: 0; font-size: 17px; line-height: 1.6; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0">Coming next, for anyone who'd rather use ordinary texts.</p>
+</div>
+<div style="border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); padding: 22px 0; display: flex; gap: 24px; align-items: baseline; flex-wrap: wrap">
+<h3 style="flex: 0 0 180px; font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: 24px; margin: 0">Web and app</h3>
+<p style="flex: 1 1 220px; min-width: 0; font-size: 17px; line-height: 1.6; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0">Planned: a page for every job, and in time a Trade Belt app, for when you want to see everything at once.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" style="max-width: 1280px; margin: 0 auto; padding: 128px 40px; text-align: left">
+<h2 style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-weight: 700; font-size: clamp(44px, 6.4vw, 92px); line-height: 1; letter-spacing: -0.03em; margin: 0 0 28px; max-width: 1000px">We're looking for a few more tradespeople to shape it with us.</h2>
+<p style="font-size: 20px; line-height: 1.6; color: color-mix(in srgb, currentColor 82%, transparent); margin: 0 0 40px; max-width: 620px">Trade Belt is in a small pilot with UK tradespeople. Whatever your trade, if you'd like to try it on your own jobs and tell us what you need, get in touch.</p>
+<a href="mailto:tommy@jenkinsonlabs.com?subject=Trade%20Belt%20pilot" style="display: inline-block; background: var(--accent); color: var(--accent-fg); text-decoration: none; font-weight: 600; font-size: 19px; padding: 19px 34px; border-radius: 999px">Email tommy@jenkinsonlabs.com</a>
+</section>
+
+<footer style="background: var(--dark-bg); color: var(--dark-fg)">
+<div style="max-width: 1280px; margin: 0 auto; padding: 56px 40px 40px">
+<div style="font-family: Archivo, system-ui, sans-serif; font-stretch: 112%; font-size: clamp(64px, 13vw, 200px); line-height: 0.9; letter-spacing: -0.04em; color: inherit">Trade Belt</div>
+<p style="margin: 20px 0 0; font-size: 18px; color: color-mix(in srgb, currentColor 82%, transparent)">Made by Jenkinson Labs, which builds practical AI tools for small businesses.</p>
+<div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px 32px; justify-content: space-between; font-size: 14px">
+<p style="margin: 0">© 2026 Jenkinson Labs, United Kingdom. Jenkinson Labs is a trading name of Tommy Jenkinson.</p>
+<div style="display: flex; gap: 28px"><a href="#privacy" style="color: inherit">Privacy policy</a><a href="mailto:tommy@jenkinsonlabs.com" style="color: inherit">Contact</a></div>
+</div>
+</div>
+</footer>
+
+</div>
+</body>
+</html>
